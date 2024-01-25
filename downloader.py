@@ -8,7 +8,7 @@ def download_songs(song_list, output_directory='output'):
         print(f"Downloading: {song_name}")
 
         # Use youtube-dl to search for and download the song
-        subprocess.run(['./youtube-dl', f'ytsearch:{song_name}', '--extract-audio', '--audio-format', 'mp3', '--output', f'{output_directory}/%(title)s.%(ext)s'])
+        subprocess.run(['./youtube-dl', f'ytsearch:{song_name} lyrics', '--extract-audio', '--audio-format', 'mp3', '--output', f'{output_directory}/%(title)s.%(ext)s'])
 
 if __name__ == "__main__":
     try:
